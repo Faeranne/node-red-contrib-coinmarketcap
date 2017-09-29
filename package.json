@@ -1,0 +1,24 @@
+{
+  "name": "node-red-contrib-coinmarketcap",
+  "version": "0.0.0",
+  "description": "Access coinmarketcap from Node Red ",
+  "main": "index.js",
+  "repository": "mrmakeit/node-red-contrib-coinmarketcap",
+  "keywords": [
+    "node-red",
+    "coinmarketcap"
+  ],
+  "author": "Blixa Morgan <blixa@projectmakeit.com> (MrMakeIt)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrmakeit/node-red-contrib-coinmarketcap/issues"
+  },
+  "node-red": {
+    "nodes": {
+      "get-coin": "coinmarketcap.js"
+    }
+  },
+  "dependencies": {
+    "superagent": "^3.6.1"
+  }
+}

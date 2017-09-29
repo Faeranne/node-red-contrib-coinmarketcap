@@ -1,0 +1,74 @@
+<script type="text/javascript">
+  RED.nodes.registerType('get-coin',{
+    category: 'function',
+    color: '#00FF33',
+    defaults: {
+      name: {value: ""}
+    },
+    inputs:1,
+    outputs:1,
+    icon:"white-globe.png",
+    label: function(){
+      return this.name||"Get Coin"
+    }
+  })
+  RED.nodes.registerType('get-all-coin',{
+    category: 'function',
+    color: '#00FF33',
+    defaults: {
+      name: {value: ""}
+    },
+    inputs:1,
+    outputs:1,
+    icon:"white-globe.png",
+    label: function(){
+      return this.name||"Get All Coins"
+    }
+  })
+</script>
+
+<script type="text/x-red" data-template-name="get-coin">
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+<script type="text/x-red" data-template-name="get-all-coin">
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="get-coin">
+  <p> Fetches current info from CoinMarketCap.com</p>
+  <h3>Inputs</h3>
+  <dl class="message-properties">
+    <dt>payload
+      <span class="property-type">string</span>
+    </dt>
+    <dd> Coin Type to send to CoinMarketCap.com </dd>
+  </dl>
+  <h3>Outputs</h3>
+  <ol class="node-ports">
+    <li>Standard output
+      <dl class="message-properties">
+        <dt>playload <span class="property-type">object</span></dt>
+        <dd>Full object from the first returned coin from CoinMarketCap.com</dd>
+      </dl>
+    </li>
+  </ol>
+</script>
+<script type="text/x-red" data-help-name="get-all-coin">
+  <p> Fetches current info from CoinMarketCap.com</p>
+  <h3>Inputs</h3>
+  <h3>Outputs</h3>
+  <ol class="node-ports">
+    <li>Standard output
+      <dl class="message-properties">
+        <dt>playload <span class="property-type">array</span></dt>
+        <dd>Array of all coins from CoinMarketCap.com</dd>
+      </dl>
+    </li>
+  </ol>
+</script>
